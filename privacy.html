@@ -1,117 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — SplitStream</title>
-<meta name="description" content="SplitStream privacy policy. No data collected, no accounts, no tracking.">
-<link rel="icon" type="image/svg+xml" href="app-assets/icon.svg">
-<link rel="apple-touch-icon" href="app-assets/icon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0; background:#0E0E0E; color:#fff; font-family:'Roboto',sans-serif; -webkit-font-smoothing:antialiased; --accent:#E10600;}
-  ::selection{background:var(--accent); color:#fff;}
-  a{color:inherit;}
-  img{max-width:100%;}
-  .wrap{max-width:760px; margin:0 auto; padding:0 32px;}
-  nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); background:rgba(14,14,14,0.78); border-bottom:1px solid #1f1f1f;}
-  nav .row{max-width:1180px; margin:0 auto; padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
-  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff;}
-  .brand span{font-weight:900; letter-spacing:0.08em; font-size:16px;}
-  .back{font-family:'Roboto Mono',monospace; font-size:13px; letter-spacing:0.04em; color:#ADAAAA; text-decoration:none;}
-  .back:hover{color:#fff;}
-  main{padding:64px 0 96px;}
-  .eyebrow{font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.22em; color:var(--accent); text-transform:uppercase; margin-bottom:18px;}
-  h1{font-weight:900; font-size:clamp(34px,5vw,52px); line-height:1.02; letter-spacing:-0.02em; margin:0 0 14px;}
-  .updated{font-family:'Roboto Mono',monospace; font-size:12.5px; color:#6f6d6d; margin-bottom:40px;}
-  h2{font-weight:700; font-size:22px; letter-spacing:-0.01em; margin:40px 0 12px;}
-  p, li{font-size:16px; line-height:1.68; color:#C9C6C6;}
-  ul{padding-left:22px; margin:12px 0;}
-  li{margin-bottom:8px;}
-  .lead{font-size:17.5px; color:#ADAAAA;}
-  .card{background:#1A1919; border:1px solid #2C2C2C; border-left:3px solid var(--accent); border-radius:6px; padding:20px 22px; margin:22px 0;}
-  .card p{margin:0; color:#fff;}
-  a.link{color:#fff; text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--accent);}
-  footer{border-top:1px solid #1a1a1a;}
-  footer .row{max-width:1180px; margin:0 auto; padding:22px 32px; display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between;}
-  footer .row div{font-family:'Roboto Mono',monospace; font-size:11px; color:#5f5d5d; line-height:1.6;}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — SplitStream</title>
+  <meta name="description" content="SplitStream privacy policy. Analytical and diagnostic data collection with opt-out available.">
+  <link rel="icon" type="image/svg+xml" href="app-assets/icon.svg">
+  <link rel="apple-touch-icon" href="app-assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0; background:#0E0E0E; color:#fff; font-family:'Roboto',sans-serif; -webkit-font-smoothing:antialiased; --accent:#E10600;}
+    ::selection{background:var(--accent); color:#fff;}
+    a{color:inherit;}
+    img{max-width:100%;}
+    .wrap{max-width:760px; margin:0 auto; padding:0 32px;}
+    nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); background:rgba(14,14,14,0.78); border-bottom:1px solid #1f1f1f;}
+    nav .row{max-width:1180px; margin:0 auto; padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff;}
+    .brand span{font-weight:900; letter-spacing:0.08em; font-size:16px;}
+    .back{font-family:'Roboto Mono',monospace; font-size:13px; letter-spacing:0.04em; color:#ADAAAA; text-decoration:none;}
+    .back:hover{color:#fff;}
+    main{padding:64px 0 96px;}
+    .eyebrow{font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.22em; color:var(--accent); text-transform:uppercase; margin-bottom:18px;}
+    h1{font-weight:900; font-size:clamp(34px,5vw,52px); line-height:1.02; letter-spacing:-0.02em; margin:0 0 14px;}
+    .updated{font-family:'Roboto Mono',monospace; font-size:12.5px; color:#6f6d6d; margin-bottom:40px;}
+    h2{font-weight:700; font-size:22px; letter-spacing:-0.01em; margin:40px 0 12px;}
+    h3{font-weight:600; font-size:17px; letter-spacing:-0.01em; margin:24px 0 8px;}
+    p, li{font-size:16px; line-height:1.68; color:#C9C6C6;}
+    ul{padding-left:22px; margin:12px 0;}
+    li{margin-bottom:8px;}
+    .lead{font-size:17.5px; color:#ADAAAA;}
+    .card{background:#1A1919; border:1px solid #2C2C2C; border-left:3px solid var(--accent); border-radius:6px; padding:20px 22px; margin:22px 0;}
+    .card p{margin:0; color:#fff;}
+    a.link{color:#fff; text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--accent);}
+    footer{border-top:1px solid #1a1a1a;}
+    footer .row{max-width:1180px; margin:0 auto; padding:22px 32px; display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between;}
+    footer .row div{font-family:'Roboto Mono',monospace; font-size:11px; color:#5f5d5d; line-height:1.6;}
+  </style>
 </head>
 <body>
-  <nav>
-    <div class="row">
-      <a class="brand" href="index.html">
-        <img src="app-assets/icon.svg" alt="SplitStream logo" width="26" height="26" style="display:block; border-radius:6px;">
-        <span>SPLITSTREAM</span>
-      </a>
-      <a class="back" href="index.html">&larr; Back to home</a>
+<nav>
+  <div class="row">
+    <a class="brand" href="index.html">
+      <img src="app-assets/icon.svg" alt="SplitStream logo" width="26" height="26" style="display:block; border-radius:6px;">
+      <span>SPLITSTREAM</span>
+    </a>
+    <a class="back" href="index.html">&larr; Back to home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: 20 July 2026</div>
+
+    <p class="lead">SplitStream ("the app", "we") is an app for tracking Formula 1 schedules, standings, results, and race statistics. This policy explains what data the app handles.</p>
+
+    <div class="card">
+      <p>SplitStream does not collect personal data or require user accounts. We do not use advertising or third-party tracking. However, we do collect optional analytical and diagnostic data as described below.</p>
     </div>
-  </nav>
 
-  <main>
-    <div class="wrap">
-      <div class="eyebrow">Legal</div>
-      <h1>Privacy Policy</h1>
-      <div class="updated">Last updated: 11 July 2026</div>
-
-      <p class="lead">SplitStream ("the app", "we") is a Formula 1 companion app. This policy explains what data the app handles.</p>
-
-      <div class="card">
-        <p>SplitStream does not collect, store, or share any personal data. There are no user accounts, no login, no analytics, no advertising, and no tracking.</p>
-      </div>
-
-      <h2>Data we collect</h2>
-      <p>None. The app has no sign-up or login and does not gather personal information about you. We do not use analytics, advertising, or tracking SDKs.</p>
-
-      <h2>Data stored on your device</h2>
-      <p>The app stores the following locally on your device only:</p>
-      <ul>
-        <li>A cache of public Formula 1 data (schedule, standings, results, lap records, trivia).</li>
-        <li>Your app settings (theme, time format, favorite drivers, per-widget theme).</li>
-      </ul>
-      <p>This data never leaves your device except as the network requests to the public data sources below. Uninstalling the app deletes it.</p>
-
-      <h2>Third-party data sources</h2>
-      <p>To show live F1 information, the app fetches public data from:</p>
-      <ul>
-        <li>Jolpica / Ergast-compatible API — schedule, standings, results.</li>
-        <li>Formula1.com public event tracker — session-time verification.</li>
-      </ul>
-      <p>Like any internet request, these services receive standard technical information such as your device's IP address and request headers. We do not control these services; their handling of that information is governed by their own privacy policies. The app sends no personal information to them beyond what any HTTP request inherently includes.</p>
-
-      <h2>Permissions</h2>
-      <ul>
-        <li>Internet / network state — fetch F1 data.</li>
-        <li>Foreground service, exact alarm, run at boot, wake lock — refresh home-screen widgets and tick countdowns on schedule.</li>
-      </ul>
-      <p>None of these access location, camera, contacts, microphone, or personal files.</p>
-
-      <h2>Data sharing and sale</h2>
-      <p>We do not sell, rent, or share any data. We hold no personal data to share.</p>
-
-      <h2>Children</h2>
-      <p>The app is suitable for general audiences and collects no data from anyone, including children.</p>
-
-      <h2>Changes</h2>
-      <p>We may update this policy; the "Last updated" date will change to reflect it.</p>
-
-      <h2>Contact</h2>
-      <p>Questions: <a class="link" href="mailto:contact@moksh.dev">contact@moksh.dev</a></p>
-
-      <h2>Disclaimer</h2>
-      <p>SplitStream is an independent app. It is not affiliated with, endorsed by, or sponsored by Formula 1, Formula One Licensing BV, FOM, or the FIA. F1, Formula 1, and team/driver names are trademarks of their respective owners.</p>
+    <div class="card">
+      <p><strong>Disclaimer:</strong> SplitStream is an independent app. It is not affiliated with, endorsed by, or sponsored by Formula 1, Formula One Licensing BV, FOM, or the FIA. F1, Formula 1, and team/driver names are trademarks of their respective owners.</p>
     </div>
-  </main>
 
-  <footer>
-    <div class="row">
-      <div>Not affiliated with Formula 1, FOM, or the FIA.</div>
-      <div>&copy; 2026 SplitStream</div>
-    </div>
-  </footer>
+
+    <h2>Data we collect</h2>
+
+    <h3>Analytical Data (Optional)</h3>
+    <p>We collect aggregated analytical data to understand user interactions and application usage patterns. This data helps us improve the app's features, performance, and user experience. Analytical data collection is <strong>optional and can be disabled at any time</strong> through the app settings. No personal information is included in this data.</p>
+
+    <h3>Crash and Diagnostic Data (Optional)</h3>
+    <p>To improve app stability and reliability, we automatically collect crash reports and diagnostic information when the app encounters an error. This data includes details about the crash event, device configuration, and app state at the time of failure. Our development team uses this information to diagnose issues, implement fixes, and enhance the overall quality of the application.</p>
+
+    <h3>Anonymized Device Identification</h3>
+    <p>We collect an anonymized device identifier to correlate diagnostic and analytical data with specific device types and configurations. This allows us to identify hardware-specific issues and optimize performance across different devices. The device identifier contains no personally identifiable information and cannot be traced back to you.</p>
+
+    <h2>Data retention and deletion</h2>
+    <p>All collected analytical and diagnostic data is automatically deleted within <strong>90 days of collection</strong>. Users can opt out of optional analytical data collection at any time through the app settings; diagnostic crash data collection cannot be disabled but is subject to the same 90-day deletion policy.</p>
+
+    <h2>Data stored on your device</h2>
+    <p>The app stores the following locally on your device only:</p>
+    <ul>
+      <li>A cache of public Formula 1 data (schedule, standings, results, lap records, trivia).</li>
+      <li>Your app settings (theme, time format, favorite drivers, per-widget theme).</li>
+    </ul>
+    <p>This data never leaves your device except as the network requests to the public data sources below. Uninstalling the app deletes it.</p>
+
+    <h2>Third-party data sources</h2>
+    <p>To show live F1 information, the app fetches public data from:</p>
+    <ul>
+      <li>Jolpica / Ergast-compatible API — schedule, standings, results.</li>
+      <li>Formula1.com public event tracker — session-time verification.</li>
+    </ul>
+    <p>Like any internet request, these services receive standard technical information such as your device's IP address and request headers. We do not control these services; their handling of that information is governed by their own privacy policies. The app sends no personal information to them beyond what any HTTP request inherently includes.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li>Internet / network state — fetch F1 data and transmit analytical/diagnostic data.</li>
+      <li>Foreground service, exact alarm, run at boot, wake lock — refresh home-screen widgets and tick countdowns on schedule.</li>
+    </ul>
+    <p>None of these access location, camera, contacts, microphone, or personal files.</p>
+
+    <h2>Data sharing and sale</h2>
+    <p>We do not sell, rent, or share any collected data with third parties. Analytical and diagnostic data is used exclusively for app improvement and maintenance purposes.</p>
+
+    <h2>Children</h2>
+    <p>The app is suitable for general audiences. We do not knowingly collect any data from children under 13. If you are a parent or guardian and believe your child has provided data to us, please contact us immediately.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy; the "Last updated" date will change to reflect it.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a class="link" href="mailto:app@technowolf.in">app@technowolf.in</a></p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="row">
+    <div>Not affiliated with Formula 1, FOM, or the FIA.</div>
+    <div>&copy; 2026 SplitStream</div>
+  </div>
+</footer>
 </body>
 </html>
