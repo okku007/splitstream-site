@@ -92,9 +92,7 @@ a { color: inherit; }
 .feats div, .tech div { border-top: 1px solid var(--rule); padding-top: 1rem; display: grid; gap: 0.375rem; align-content: start; }
 .feats b, .tech b { font-weight: 500; font-size: 1rem; }
 .feats span, .tech span { font-size: 0.875rem; opacity: 0.62; line-height: 1.55; }
-.sizes { display: grid; grid-template-columns: 110fr 250fr 250fr; gap: 1.75rem; align-items: end; margin-top: 3rem; }
-.sizes figure { margin: 0; display: grid; gap: 0.75rem; }
-.sizes figcaption { font: 500 0.6875rem/1 var(--mono); letter-spacing: 0.2em; opacity: 0.5; }
+.sizes { display: grid; grid-template-columns: 1fr 1.5fr 1.5fr; gap: 1.25rem; margin-top: 3rem; }
 .anchor { scroll-margin-top: 1rem; }
 
 /* how it's built */
@@ -136,11 +134,25 @@ a { color: inherit; }
 /* ---------- widgets ---------- */
 .wid { container-type: inline-size; width: 100%; max-width: 30rem; justify-self: center; }
 .wid.xl { max-width: 35rem; }
-.sizes .wid { max-width: none; justify-self: start; }
+
+/* frame: a tray around each widget with a caption bar, like the old catalog cards */
+.ink { --tray: #141417; }
+.paper { --tray: #E3E3DD; }
+.frame { margin: 0; width: 100%; max-width: 34rem; justify-self: center; border: 1px solid var(--rule); border-radius: 0.875rem; overflow: hidden; display: flex; flex-direction: column; }
+.tray { flex: 1; display: grid; place-items: center; padding: 2.75rem 2rem; background: var(--tray); }
+.tray .wid { max-width: 22rem; }
+.tray .wid.xl { max-width: 26rem; }
+.frame figcaption { padding: 0.875rem 1.125rem; border-top: 1px solid var(--rule); font: 500 0.6875rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
+/* sizes share one dp scale so S, M and L read true to each other */
+.sizes .frame { max-width: none; }
+.sizes .tray { padding: 2rem 1.25rem; }
+.sizes .wid { --k: 0.062rem; max-width: none; }
+.sizes .ws { width: calc(110 * var(--k)); }
+.sizes .wm, .sizes .wl { width: calc(250 * var(--k)); }
 .w {
   --d: calc(100cqw / var(--W));
   width: 100%; aspect-ratio: var(--W) / var(--H); border-radius: calc(16 * var(--d)); padding: calc(12 * var(--d));
-  font-family: var(--wf); display: flex; flex-direction: column; overflow: hidden; line-height: 1.2;
+  font-family: var(--wf); font-size: calc(12 * var(--d)); display: flex; flex-direction: column; overflow: hidden; line-height: 1.2;
   font-variant-numeric: tabular-nums;
 }
 .w.dark { background: #1A1919; color: #FFFFFF; --t2: #ADAAAA; --t3: #949292; --el: #262626; --div: #2A2929; box-shadow: 0 0 0 1px var(--ink-rule); }
@@ -230,12 +242,15 @@ a { color: inherit; }
   .flow { grid-template-columns: 1fr; }
   .flow div { border-left: 0; border-top: 1px solid var(--rule); }
   .flow div:first-child { border-top: 0; }
-  .sizes { gap: 0.75rem; }
+  .sizes { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .sizes .frame:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
   .feats, .tech { grid-template-columns: 1fr; }
-  .sizes { grid-template-columns: 1fr; gap: 1.5rem; }
-  .sizes figure:first-child { width: 44%; }
+  .sizes { grid-template-columns: 1fr; gap: 1rem; }
+  .tray { padding: 2rem 1.25rem; }
+  .tray .wid { max-width: 16.5rem; }
+  .tray .wid.xl { max-width: 18.5rem; }
   .page-head { padding-block: 2.5rem 4.5rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
