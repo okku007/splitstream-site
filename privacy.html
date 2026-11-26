@@ -1,129 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — SplitStream</title>
-  <meta name="description" content="SplitStream privacy policy. Analytical and diagnostic data collection with opt-out available.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy · SplitStream</title>
+  <meta name="description" content="SplitStream privacy policy for the Android and iOS apps: no accounts, no ads, no tracking or analytics SDKs.">
+  <meta name="theme-color" content="#EDEDE8">
+  <link rel="icon" type="image/png" sizes="32x32" href="app-assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="app-assets/favicon-64.png">
   <link rel="icon" type="image/svg+xml" href="app-assets/icon.svg">
-  <link rel="apple-touch-icon" href="app-assets/icon.svg">
+  <link rel="apple-touch-icon" href="app-assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0; background:#0E0E0E; color:#fff; font-family:'Roboto',sans-serif; -webkit-font-smoothing:antialiased; --accent:#E10600;}
-    ::selection{background:var(--accent); color:#fff;}
-    a{color:inherit;}
-    img{max-width:100%;}
-    .wrap{max-width:760px; margin:0 auto; padding:0 32px;}
-    nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); background:rgba(14,14,14,0.78); border-bottom:1px solid #1f1f1f;}
-    nav .row{max-width:1180px; margin:0 auto; padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px;}
-    .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff;}
-    .brand span{font-weight:900; letter-spacing:0.08em; font-size:16px;}
-    .back{font-family:'Roboto Mono',monospace; font-size:13px; letter-spacing:0.04em; color:#ADAAAA; text-decoration:none;}
-    .back:hover{color:#fff;}
-    main{padding:64px 0 96px;}
-    .eyebrow{font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.22em; color:var(--accent); text-transform:uppercase; margin-bottom:18px;}
-    h1{font-weight:900; font-size:clamp(34px,5vw,52px); line-height:1.02; letter-spacing:-0.02em; margin:0 0 14px;}
-    .updated{font-family:'Roboto Mono',monospace; font-size:12.5px; color:#6f6d6d; margin-bottom:40px;}
-    h2{font-weight:700; font-size:22px; letter-spacing:-0.01em; margin:40px 0 12px;}
-    h3{font-weight:600; font-size:17px; letter-spacing:-0.01em; margin:24px 0 8px;}
-    p, li{font-size:16px; line-height:1.68; color:#C9C6C6;}
-    ul{padding-left:22px; margin:12px 0;}
-    li{margin-bottom:8px;}
-    .lead{font-size:17.5px; color:#ADAAAA;}
-    .card{background:#1A1919; border:1px solid #2C2C2C; border-left:3px solid var(--accent); border-radius:6px; padding:20px 22px; margin:22px 0;}
-    .card p{margin:0; color:#fff;}
-    a.link{color:#fff; text-decoration:underline; text-underline-offset:3px; text-decoration-color:var(--accent);}
-    footer{border-top:1px solid #1a1a1a;}
-    footer .row{max-width:1180px; margin:0 auto; padding:22px 32px; display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between;}
-    footer .row div{font-family:'Roboto Mono',monospace; font-size:11px; color:#5f5d5d; line-height:1.6;}
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@500&family=Roboto:wght@400;500;700&family=Noto+Sans+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  
 </head>
 <body>
-<nav>
-  <div class="row">
-    <a class="brand" href="index.html">
-      <img src="app-assets/icon.svg" alt="SplitStream logo" width="26" height="26" style="display:block; border-radius:6px;">
-      <span>SPLITSTREAM</span>
-    </a>
-    <a class="back" href="index.html">&larr; Back to home</a>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="lc"><path d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z"/></clipPath>
+    <symbol id="mark" viewBox="26 26 44 44">
+      <path d="M67.75,43.75 L47.75,43.75 A4,4 0 0,0 43.75,47.75 L43.75,67.75 A4,4 0 0,0 51.75,67.75 L51.75,51.75 L67.75,51.75 A4,4 0 0,0 67.75,43.75 Z" fill="currentColor"/>
+      <path d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z" fill="currentColor"/>
+      <g clip-path="url(#lc)"><path transform="translate(1.25 1.25)" d="M27 27 L45 27 L43.55 28.14 L43.5 29.29 L41.26 30.43 L41 31.57 L39.06 32.71 L38.22 33.86 L37.5 35 L36.47 35 L35.43 34.77 L34.4 35 L34.6 36.54 L34.34 38.08 L34.33 39.62 L34.39 41.17 L33.97 42.71 L34.86 44.25 L33.83 45.79 L34.03 47.33 L33.73 48.88 L34.07 50.42 L34.27 51.96 L33.9 53.5 L32.17 54.47 L30.45 53.78 L28.73 53.55 L27 54.5Z" fill="#FF3B2F"/></g>
+    </symbol>
+    <symbol id="playglyph" viewBox="0 0 20 24"><path d="M0 0 L0 24 L20 12 Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+<header class="site-head paper">
+  <div class="in">
+    <a class="lock" href="index.html" aria-label="SplitStream home"><svg aria-hidden="true"><use href="#mark"/></svg><span>SPLITSTREAM</span></a>
+    <nav class="links" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html">How it's built</a><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+    <details class="menu">
+      <summary aria-label="Menu"><span>Menu</span></summary>
+      <nav class="links" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html">How it's built</a><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+    </details>
   </div>
-</nav>
-
-<main>
-  <div class="wrap">
-    <div class="eyebrow">Legal</div>
-    <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: 26 November 2026</div>
-
-    <p class="lead">SplitStream ("the app", "we") is an app for tracking Formula 1 schedules, standings, results, and race statistics. This policy covers the Android and iOS apps and their home-screen widgets, and explains what data they handle.</p>
-
-    <div class="card">
+</header>
+<main id="main" class="paper">
+  <div class="in">
+    <div class="page-head">
+      <p class="eyebrow">Legal · Last updated: 26 November 2026</p>
+      <h1 class="line">privacy policy</h1>
+    </div>
+    <article class="read">
+      <p>SplitStream ("the app", "we") is an app for tracking Formula 1 schedules, standings, results, and race statistics. This policy covers the Android and iOS apps and their home-screen widgets, and explains what data they handle.</p>
       <p>SplitStream does not collect personal data or require user accounts. It contains no advertising, no third-party tracking, and no analytics or crash-reporting SDK. The only usage and crash statistics we see are the aggregated ones the app stores provide, described below.</p>
-    </div>
-
-    <div class="card">
       <p><strong>Disclaimer:</strong> SplitStream is an independent app. It is not affiliated with, endorsed by, or sponsored by Formula 1, Formula One Licensing BV, FOM, or the FIA. F1, Formula 1, and team/driver names are trademarks of their respective owners.</p>
-    </div>
 
+      <h2>Data we collect</h2>
+      <p>The app itself sends us nothing. It has no analytics, crash-reporting, or advertising code, and it never assigns or transmits a device identifier.</p>
+      <h3>Statistics from the app stores</h3>
+      <p>Google Play (Android vitals) and Apple (App Store Connect analytics and crash reports) give developers aggregated statistics such as install counts, crash rates, and crash logs. They collect this only from people who have agreed, in their device settings, to share diagnostics with app developers, and you can turn that sharing off there at any time. We use these statistics only to find and fix problems. Google's and Apple's own privacy policies govern how they collect it.</p>
 
-    <h2>Data we collect</h2>
-    <p>The app itself sends us nothing. It has no analytics, crash-reporting, or advertising code, and it never assigns or transmits a device identifier.</p>
+      <h2>Data stored on your device</h2>
+      <p>The app stores the following locally on your device only:</p>
+      <ul>
+        <li>A cache of public Formula 1 data (schedule, standings, results, lap records, trivia).</li>
+        <li>Your app settings (theme, time format, favorite drivers, per-widget theme).</li>
+        <li>On iOS, the widgets read this cache and your widget settings from a storage area shared only between the app and its own widget extension (an App Group).</li>
+      </ul>
+      <p>This data never leaves your device except as the network requests to the public data sources below. Uninstalling the app deletes it.</p>
 
-    <h3>Statistics from the app stores</h3>
-    <p>Google Play (Android vitals) and Apple (App Store Connect analytics and crash reports) give developers aggregated statistics such as install counts, crash rates, and crash logs. They collect this only from people who have agreed, in their device settings, to share diagnostics with app developers, and you can turn that sharing off there at any time. We use these statistics only to find and fix problems. Google's and Apple's own privacy policies govern how they collect it.</p>
+      <h2>Third-party data sources</h2>
+      <p>To show live F1 information, the app fetches public data from:</p>
+      <ul>
+        <li>Jolpica / Ergast-compatible API — schedule, standings, results.</li>
+        <li>Formula1.com public event tracker — session-time verification.</li>
+      </ul>
+      <p>Like any internet request, these services receive standard technical information such as your device's IP address and request headers. We do not control these services; their handling of that information is governed by their own privacy policies. The app sends no personal information to them beyond what any HTTP request inherently includes.</p>
 
-    <h2>Data stored on your device</h2>
-    <p>The app stores the following locally on your device only:</p>
-    <ul>
-      <li>A cache of public Formula 1 data (schedule, standings, results, lap records, trivia).</li>
-      <li>Your app settings (theme, time format, favorite drivers, per-widget theme).</li>
-      <li>On iOS, the widgets read this cache and your widget settings from a storage area shared only between the app and its own widget extension (an App Group).</li>
-    </ul>
-    <p>This data never leaves your device except as the network requests to the public data sources below. Uninstalling the app deletes it.</p>
+      <h2>Permissions</h2>
+      <p>Android:</p>
+      <ul>
+        <li>Internet / network state — fetch F1 data.</li>
+        <li>Foreground service, exact alarm, run at boot, wake lock — refresh home-screen widgets and tick countdowns on schedule.</li>
+      </ul>
+      <p>iOS:</p>
+      <ul>
+        <li>Background App Refresh — refresh widget data while the app is closed. You can turn it off in Settings; widgets then update when you open the app.</li>
+      </ul>
+      <p>None of these access location, camera, contacts, microphone, photos, or personal files, and the app asks for no runtime permissions on either platform.</p>
 
-    <h2>Third-party data sources</h2>
-    <p>To show live F1 information, the app fetches public data from:</p>
-    <ul>
-      <li>Jolpica / Ergast-compatible API — schedule, standings, results.</li>
-      <li>Formula1.com public event tracker — session-time verification.</li>
-    </ul>
-    <p>Like any internet request, these services receive standard technical information such as your device's IP address and request headers. We do not control these services; their handling of that information is governed by their own privacy policies. The app sends no personal information to them beyond what any HTTP request inherently includes.</p>
+      <h2>Data sharing and sale</h2>
+      <p>We do not sell, rent, or share data with third parties. The app-store statistics above are used only for app improvement and maintenance.</p>
 
-    <h2>Permissions</h2>
-    <p>Android:</p>
-    <ul>
-      <li>Internet / network state — fetch F1 data.</li>
-      <li>Foreground service, exact alarm, run at boot, wake lock — refresh home-screen widgets and tick countdowns on schedule.</li>
-    </ul>
-    <p>iOS:</p>
-    <ul>
-      <li>Background App Refresh — refresh widget data while the app is closed. You can turn it off in Settings; widgets then update when you open the app.</li>
-    </ul>
-    <p>None of these access location, camera, contacts, microphone, photos, or personal files, and the app asks for no runtime permissions on either platform.</p>
+      <h2>Children</h2>
+      <p>The app is suitable for general audiences. It collects no personal data from anyone, including children under 13. If you are a parent or guardian and believe your child has provided data to us, please contact us immediately.</p>
 
-    <h2>Data sharing and sale</h2>
-    <p>We do not sell, rent, or share data with third parties. The app-store statistics above are used only for app improvement and maintenance.</p>
+      <h2>Changes</h2>
+      <p>We may update this policy; the "Last updated" date will change to reflect it.</p>
 
-    <h2>Children</h2>
-    <p>The app is suitable for general audiences. It collects no personal data from anyone, including children under 13. If you are a parent or guardian and believe your child has provided data to us, please contact us immediately.</p>
-
-    <h2>Changes</h2>
-    <p>We may update this policy; the "Last updated" date will change to reflect it.</p>
-
-    <h2>Contact</h2>
-    <p>Questions: <a class="link" href="mailto:app@technowolf.in">app@technowolf.in</a></p>
-
+      <h2>Contact</h2>
+      <p>Questions: <a href="mailto:app@technowolf.in">app@technowolf.in</a></p>
+    </article>
   </div>
 </main>
-
-<footer>
-  <div class="row">
-    <div>Not affiliated with Formula 1, FOM, or the FIA.</div>
-    <div>&copy; 2026 SplitStream</div>
+<footer class="site-foot paper">
+  <div class="in">
+    <a class="lock" href="index.html" aria-label="SplitStream home"><svg aria-hidden="true"><use href="#mark"/></svg><span>SPLITSTREAM</span></a>
+    <nav class="fl" aria-label="Footer"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html">How it's built</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="https://play.google.com/store/apps/details?id=dev.moksh.splitstream">Google Play</a></nav>
+    <p>Schedule, standings and results via the Jolpica / Ergast-compatible API and the official Formula 1 event tracker. Not affiliated with, endorsed by, or sponsored by Formula 1, FOM, or the FIA. F1, Formula 1, and team names are trademarks of their respective owners. &copy; 2026 SplitStream</p>
   </div>
 </footer>
 </body>
