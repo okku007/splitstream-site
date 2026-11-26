@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="SplitStream">
-  <rect width="108" height="108" rx="24" fill="#161616"/>
-  <rect x="18.9" y="32.4" width="62.1" height="10.8" rx="2.7" fill="#FFFFFF"/>
-  <rect x="33.75" y="56.7" width="62.1" height="10.8" rx="2.7" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 60 60" width="60" height="60" role="img" aria-label="SplitStream">
+  <defs>
+    <clipPath id="lead"><path d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z"/></clipPath>
+  </defs>
+  <rect x="18" y="18" width="60" height="60" rx="13" fill="#EEEDE8"/>
+  <path fill="#141416" d="M67.75,43.75 L47.75,43.75 A4,4 0 0,0 43.75,47.75 L43.75,67.75 A4,4 0 0,0 51.75,67.75 L51.75,51.75 L67.75,51.75 A4,4 0 0,0 67.75,43.75 Z"/>
+  <path fill="#141416" d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z"/>
+  <g clip-path="url(#lead)"><path transform="translate(1.25 1.25)" fill="#FF3B2F" d="M27 27 L45 27 L43.55 28.14 L43.5 29.29 L41.26 30.43 L41 31.57 L39.06 32.71 L38.22 33.86 L37.5 35 L36.47 35 L35.43 34.77 L34.4 35 L34.6 36.54 L34.34 38.08 L34.33 39.62 L34.39 41.17 L33.97 42.71 L34.86 44.25 L33.83 45.79 L34.03 47.33 L33.73 48.88 L34.07 50.42 L34.27 51.96 L33.9 53.5 L32.17 54.47 L30.45 53.78 L28.73 53.55 L27 54.5Z"/></g>
 </svg>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How it's built · SplitStream</title>
+  <meta name="description" content="How SplitStream works under the hood: one Kotlin Multiplatform core, a local cache, and native widgets on Android and iOS.">
+  <meta name="theme-color" content="#EDEDE8">
+  <link rel="icon" type="image/png" sizes="32x32" href="app-assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="app-assets/favicon-64.png">
+  <link rel="icon" type="image/svg+xml" href="app-assets/icon.svg">
+  <link rel="apple-touch-icon" href="app-assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@500&family=Roboto:wght@400;500;700&family=Noto+Sans+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+  
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="lc"><path d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z"/></clipPath>
+    <symbol id="mark" viewBox="26 26 44 44">
+      <path d="M67.75,43.75 L47.75,43.75 A4,4 0 0,0 43.75,47.75 L43.75,67.75 A4,4 0 0,0 51.75,67.75 L51.75,51.75 L67.75,51.75 A4,4 0 0,0 67.75,43.75 Z" fill="currentColor"/>
+      <path d="M52.25,28.25 L32.25,28.25 A4,4 0 0,0 28.25,32.25 L28.25,52.25 A4,4 0 0,0 36.25,52.25 L36.25,36.25 L52.25,36.25 A4,4 0 0,0 52.25,28.25 Z" fill="currentColor"/>
+      <g clip-path="url(#lc)"><path transform="translate(1.25 1.25)" d="M27 27 L45 27 L43.55 28.14 L43.5 29.29 L41.26 30.43 L41 31.57 L39.06 32.71 L38.22 33.86 L37.5 35 L36.47 35 L35.43 34.77 L34.4 35 L34.6 36.54 L34.34 38.08 L34.33 39.62 L34.39 41.17 L33.97 42.71 L34.86 44.25 L33.83 45.79 L34.03 47.33 L33.73 48.88 L34.07 50.42 L34.27 51.96 L33.9 53.5 L32.17 54.47 L30.45 53.78 L28.73 53.55 L27 54.5Z" fill="#FF3B2F"/></g>
+    </symbol>
+    <symbol id="playglyph" viewBox="0 0 20 24"><path d="M0 0 L0 24 L20 12 Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+<header class="site-head ink">
+  <div class="in">
+    <a class="lock" href="index.html" aria-label="SplitStream home"><svg aria-hidden="true"><use href="#mark"/></svg><span>SPLITSTREAM</span></a>
+    <nav class="links" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html" aria-current="page">How it's built</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+    <details class="menu">
+      <summary aria-label="Menu"><span>Menu</span></summary>
+      <nav class="links" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html" aria-current="page">How it's built</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+<section class="ink">
+  <div class="in page-head">
+    <p class="eyebrow">How it's built</p>
+    <h1 class="line">one core, quietly doing the work</h1>
+    <p class="sub">SplitStream is a Kotlin Multiplatform app. One shared core owns sync, the cache and every number a widget shows. Each platform draws it in its own native UI.</p>
+  </div>
+</section>
+<section class="band paper">
+  <div class="in">
+    <h2 class="line sm">widgets never wait for the network</h2>
+    <p class="sub">The app syncs and publishes snapshots. Widgets only read them, so they draw instantly and stay filled offline.</p>
+    <div class="flow">
+      <div><em>Sources</em><b>Jolpica and Formula1.com</b><span>Schedule, standings and results. Official session times override when they shift.</span></div>
+      <div><em>Shared core</em><b>One repository</b><span>Hashes each payload and only rewrites the SQLDelight cache when something changed.</span></div>
+      <div><em>Snapshots</em><b>Ready to draw</b><span>Small serialized models, one per widget, written after every sync.</span></div>
+      <div><em>Surfaces</em><b>App and widgets</b><span>Compose and RemoteViews on Android. SwiftUI and WidgetKit on iOS.</span></div>
+    </div>
+  </div>
+</section>
+<section class="band ink">
+  <div class="in">
+    <div class="row">
+      <div><h2 class="line sm">refresh when it matters</h2><p class="sub">Every 30 seconds while a session is live, every 15 minutes near a race weekend, every six hours otherwise. Manual refresh waits a minute between pulls, app-wide.</p></div>
+      <div><h2 class="line sm">built for every size</h2><p class="sub">Each widget has its own layout for small, medium, large and extra large, matched to your home screen grid. Drag to resize and it switches to the layout that fits, with nothing cut off or stretched.</p></div>
+    </div>
+  </div>
+</section>
+<section class="band paper">
+  <div class="in">
+    <p class="eyebrow">For the engineers</p>
+    <h2 class="line sm">under the hood</h2>
+    <p class="sub">What each piece does, and why it is there.</p>
+    <div class="tech">
+      <div><em>Kotlin Multiplatform</em><b>One core for both phones</b><span>Sync, caching, time logic and every number on screen are written once and shared by Android and iOS.</span></div>
+      <div><em>SQLDelight</em><b>A typed local cache</b><span>The season lives on the device, so the app opens instantly and widgets draw without the network.</span></div>
+      <div><em>Ktor</em><b>Networking</b><span>OkHttp on Android, the native client on iOS, behind one shared API.</span></div>
+      <div><em>kotlinx.serialization · datetime</em><b>Data and time zones</b><span>Parses the feeds, writes widget snapshots, and turns session times into your local time.</span></div>
+      <div><em>Jetpack Compose</em><b>The Android app</b><span>Schedule, standings and widget setup, with its own light, dark and system theme.</span></div>
+      <div><em>RemoteViews</em><b>Android widgets</b><span>Native launcher views with a layout for every size, and a countdown the launcher ticks by itself.</span></div>
+      <div><em>WorkManager · AlarmManager</em><b>Refresh on time</b><span>Background refresh that speeds up around sessions and rests the rest of the week.</span></div>
+      <div><em>SwiftUI · WidgetKit</em><b>The iOS app</b><span>Native screens and widgets on top of the same shared core, with interactive standings paging.</span></div>
+      <div><em>Shared tests in CI</em><b>Release gate</b><span>The shared logic is tested on every push, and a release waits until those tests pass.</span></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot paper">
+  <div class="in">
+    <a class="lock" href="index.html" aria-label="SplitStream home"><svg aria-hidden="true"><use href="#mark"/></svg><span>SPLITSTREAM</span></a>
+    <nav class="fl" aria-label="Footer"><a href="index.html#features">Features</a><a href="index.html#widgets">Widgets</a><a href="built.html">How it's built</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="https://play.google.com/store/apps/details?id=dev.moksh.splitstream">Google Play</a></nav>
+    <p>Schedule, standings and results via the Jolpica / Ergast-compatible API and the official Formula 1 event tracker. Not affiliated with, endorsed by, or sponsored by Formula 1, FOM, or the FIA. F1, Formula 1, and team names are trademarks of their respective owners. &copy; 2026 SplitStream</p>
+  </div>
+</footer>
+</body>
+</html>
