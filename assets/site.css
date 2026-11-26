@@ -48,6 +48,8 @@ a { color: inherit; }
 .line.sm { font-size: clamp(1.625rem, 3.4vw, 2.5rem); }
 .sub { font-size: 1.0625rem; line-height: 1.6; opacity: 0.68; margin: 1.125rem 0 0; max-width: 44ch; }
 .meta { font: 500 0.6875rem/1.5 var(--mono); letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.5; margin-top: 1.375rem; }
+/* on phones the long meta line breaks at a chosen point instead of leaving a dot at a line end */
+.meta .brk { display: none; }
 .eyebrow { font: 500 0.6875rem/1 var(--mono); letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.5; margin: 0 0 1.125rem; }
 
 /* header */
@@ -136,13 +138,13 @@ a { color: inherit; }
 .wid.xl { max-width: 35rem; }
 
 /* frame: a tray around each widget with a caption bar, like the old catalog cards */
-.ink { --tray: #141417; }
-.paper { --tray: #E3E3DD; }
-.frame { margin: 0; width: 100%; max-width: 34rem; justify-self: center; border: 1px solid var(--rule); border-radius: 0.875rem; overflow: hidden; display: flex; flex-direction: column; }
+.ink { --tray: #131316; --frame: #3A3A40; }
+.paper { --tray: #DFDFD8; --frame: #C2C2BA; }
+.frame { margin: 0; width: 100%; max-width: 34rem; justify-self: center; border: 1px solid var(--frame); border-radius: 0.875rem; overflow: hidden; display: flex; flex-direction: column; }
 .tray { flex: 1; display: grid; place-items: center; padding: 2.75rem 2rem; background: var(--tray); }
 .tray .wid { max-width: 22rem; }
 .tray .wid.xl { max-width: 26rem; }
-.frame figcaption { padding: 0.875rem 1.125rem; border-top: 1px solid var(--rule); font: 500 0.6875rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
+.frame figcaption { padding: 0.875rem 1.125rem; border-top: 1px solid var(--frame); font: 500 0.6875rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
 /* sizes share one dp scale so S, M and L read true to each other */
 .sizes .frame { max-width: none; }
 .sizes .tray { padding: 2rem 1.25rem; }
@@ -248,10 +250,16 @@ a { color: inherit; }
 @media (max-width: 520px) {
   .feats, .tech { grid-template-columns: 1fr; }
   .sizes { grid-template-columns: 1fr; gap: 1rem; }
+  .meta:not(.short) .sep { display: none; }
+  .meta:not(.short) .brk { display: block; }
   .tray { padding: 2rem 1.25rem; }
   .tray .wid { max-width: 16.5rem; }
   .tray .wid.xl { max-width: 18.5rem; }
   .page-head { padding-block: 2.5rem 4.5rem; }
+}
+@media (max-width: 359px) {
+  .meta.short .sep { display: none; }
+  .meta.short .brk { display: block; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .wid .w { transition: transform 0.4s ease; }
